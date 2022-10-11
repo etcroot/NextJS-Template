@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply !font-sans m-0 p-0 bg-black text-slate-300;
+  }
+
+  a {
+    @apply text-inherit no-underline text-slate-200;
+  }
+
+  p {
+    @apply text-sm;
+  }
+
+  h3 {
+    @apply text-white font-bold mb-2;
+  }
+
+  small {
+    @apply text-xs text-slate-400;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply max-w-5xl mx-auto px-4 min-h-screen;
+  }
+  .content {
+    @apply flex flex-col gap-3 flex-1;
+  }
+  .content-header {
+    @apply flex flex-col py-4;
+  }
+  .content-body {
+    @apply flex flex-col;
+  }
+  .content-section {
+    @apply flex flex-col gap-3;
+  }
+  .page-title {
+    @apply text-2xl font-bold text-white;
+  }
+  .custom-list {
+    @apply list-inside;
+  }
+  .custom-list > li {
+    @apply before:content-['➞'] before:text-white before:mr-1;
+  }
+}
